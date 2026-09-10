@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaewUanStore</title>
+    <!-- External Style Sheets / Fonts -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome / TailwindCSS / Custom CSS Links -->
+</head>
+<body>
+
+    <!-- Loading Overlay -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <img src="logo.png" alt="Logo">
+            <p>MaewUanStore</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="?page=home" class="brand">
+                <img src="logo.png" alt="Logo">
+                <span>MaewUanStore</span>
+            </a>
+            <div class="menu">
+                <ul>
+                    <li><a href="?page=home"><i class="fas fa-home"></i> หน้าหลัก</a></li>
+                    <li><a href="?page=shop"><i class="fas fa-shopping-cart"></i> สินค้าทั้งหมด</a></li>
+                    <li><a href="?page=topup"><i class="fas fa-wallet"></i> เติมเงิน</a></li>
+                    <li><a href="?page=otp"><i class="fas fa-key"></i> OTP</a></li>
+                    <li><a href="?page=redeem"><i class="fas fa-ticket-alt"></i> โค้ดส่วนลด</a></li>
+                    <li><a href="?page=how"><i class="fas fa-book"></i> วิธีใช้</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> ติดต่อ</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="?page=login" class="btn btn-login"><i class="fas fa-sign-in-alt"></i> เข้าสู่ระบบ</a>
+                    <a href="?page=register" class="btn btn-register"><i class="fas fa-user-plus"></i> สมัครสมาชิก</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Banner Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="logo-box">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <h1>MaewUanStore</h1>
+            <div class="action-buttons">
+                <a href="?page=login" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>เข้าสู่ระบบเลย</span>
+                </a>
+                <a href="?page=home" class="btn btn-secondary">
+                    <i class="fas fa-store"></i>
+                    <span>เยี่ยมชมสินค้า</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Purchase Modal / Container -->
+    <div class="modal-buy" id="buyModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>สั่งซื้อสินค้า</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="product-info">
+                        <span>คงเหลือ: <span id="stockCount">0</span> ชิ้น</span>
+                        <span>ราคา <span id="price">0</span> ฿</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- About Info -->
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Logo">
+                    <h4>MaewUanStore</h4>
+                </div>
+
+                <!-- Main Menu -->
+                <div class="footer-links">
+                    <h5>เมนูหลัก</h5>
+                    <ul>
+                        <li><a href="?page=home"><i class="fas fa-chevron-right"></i> หน้าหลัก</a></li>
+                        <li><a href="?page=shop"><i class="fas fa-chevron-right"></i> สินค้า</a></li>
+                        <li><a href="?page=topup"><i class="fas fa-chevron-right"></i> เติมเงิน</a></li>
+                        <li><a href="?page=login"><i class="fas fa-chevron-right"></i> เข้าสู่ระบบ</a></li>
+                    </ul>
+                </div>
+
+                <!-- History Links -->
+                <div class="footer-links">
+                    <h5>ประวัติต่างๆ</h5>
+                    <ul>
+                        <li><a href="?page=buyhis"><i class="fas fa-chevron-right"></i> ประวัติซื้อสินค้า</a></li>
+                        <li><a href="?page=topuphis"><i class="fas fa-chevron-right"></i> ประวัติเติมเงิน</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Discord Community -->
+                <div class="footer-social">
+                    <h5>ติดตามเรา</h5>
+                    <div class="community-box">
+                        <div class="author-info">
+                            <h5>x2renxy</h5>
+                            <small>Community & Support</small>
+                        </div>
+                        <p>เข้ามาร่วมพูดคุย ติดตามข่าวสารโปรโมชั่น และรับบริการช่วยเหลือจากทีมงานของเราได้ที่ Discord ชุมชนหลัก</p>
+                        <a href="https://discord.gg/k4mzCv6xnS" target="_blank" class="btn-discord">
+                            <i class="fab fa-discord"></i> เข้าร่วมดิสคอร์ด (Join Server)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2026 MaewUanStore. All rights reserved.</p>
+            <p>Powered by x2renxy</p>
+        </div>
+    </footer>
+
+</body>
+</html>
